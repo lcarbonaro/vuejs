@@ -10,5 +10,7 @@ Usage Steps:
 
 References:
 - [VueJS](https://vuejs.org/)
+- [VueJS By Example](https://coursetro.com/courses/23/Vue-Tutorial-in-2018---Learn-Vue.js-by-Example)
+- [VueMastery](https://www.vuemastery.com/courses/intro-to-vue-js/vue-instance)
 
 
