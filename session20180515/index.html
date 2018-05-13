@@ -21,9 +21,9 @@
       <p>Welcome to all {{attendees}} attendees.</p>
 
       <div v-if="showComment">
-          <p v-if="attendees>10">Good crowd</p>
-          <p v-else-if="attendees<2">Speaking to myself again</p>
-          <p v-else="attendees>5 && attendees<=10">Some interest</p>
+          <p v-if="attendees>10">Wow, what a crowd!</p>
+          <p v-else-if="attendees>=2 && attendees<=10">Good turnout</p>
+          <p v-else="attendees<2">Talking to myself again</p>
       </div>
 
       <ul>
@@ -78,9 +78,9 @@
             backgroundColor: 'lightgray',
             fontSize:'2em'
           },
-          message: 'hi there',
-          attendees: 15,
-          showComment: false,
+          message: 'Hello VueJS!',
+          attendees: 1,
+          showComment: true,
           members: [
             {name:'Jack', isPresent:true},
             {name:'Jill', isPresent:false},
