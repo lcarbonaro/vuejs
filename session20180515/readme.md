@@ -5,7 +5,11 @@ This example uses a CDN to get the VueJS library. This is the recommended approa
 
 Usage Steps:
 
-1. simply download or `git clone` or copy-paste the one self-contained file `index.html`
+1. Simply download or `git clone` or copy-paste the one self-contained file `index.html`
+2. Open in your favourite browser
+3. Open in your favourite code editor to experiment and learn more
+
+Happy coding :-)
 
 
 References:
