@@ -10,7 +10,10 @@
 
     <style>
       .present {
-        color:green;
+        color:blue;
+      }
+      .absent {
+        color:red; 
       }
     </style>
 
@@ -27,9 +30,11 @@
       </div>
 
       <ul>
-        <li v-for="member in members" :class="{present:member.isPresent}">{{member.name}}</li>
+        <li v-for="m in members" :class="{present:m.isPresent, absent:!m.isPresent}">{{m.name}}</li>
       </ul>
+      <input v-model="newMember" type="text"><button v-on:click="addMember">Add Member</button>
       
+      <br><br>
       <button v-on:click="handleBtnClick">Show Member Count</button>
 
       <br><br>
@@ -88,6 +93,7 @@
             {name:'Wilma', isPresent:true},
             {name:'Barney', isPresent:false}
           ],
+          newMember: '',
           counter: 0
         },
         methods: {
@@ -96,6 +102,10 @@
           },
           countKeys: function() {
             this.counter++;
+          },
+          addMember: function() {
+            this.members.push({name:this.newMember});
+            this.newMember = '';
           }
         }
       });
