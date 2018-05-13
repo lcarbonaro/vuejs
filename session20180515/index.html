@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+
+    <title>Hello, VueJS!</title>
+
+    <script src="https://unpkg.com/vue"></script>
+
+    <style>
+      .present {
+        color:green;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="app">
+      <p>{{message.toUpperCase()}}</p>
+      <p>Welcome to all {{attendees}} attendees.</p>
+
+      <div v-if="showComment">
+          <p v-if="attendees>10">Good crowd</p>
+          <p v-else-if="attendees<2">Speaking to myself again</p>
+          <p v-else="attendees>5 && attendees<=10">Some interest</p>
+      </div>
+
+      <ul>
+        <li v-for="member in members" :class="{present:member.isPresent}">{{member.name}}</li>
+      </ul>
+      
+      <button v-on:click="handleBtnClick">Show Member Count</button>
+
+      <br><br>
+      <input @keyup="countKeys" type="text">  {{counter}}
+
+      <br><br>
+      <span :title="message">Some text for the span</span>
+
+      <div :style="divStyle">This is a styled div</div>
+
+      <br><br>
+      <input v-model="message" type="text">
+
+      <br><br>
+      <mycomp myprop="one" mycolor="red"   ></mycomp>
+      <mycomp myprop="two" mycolor="blue"   ></mycomp>
+      <mycomp myprop="three" mycolor="orange" ></mycomp>
+
+    </div>
+
+    <script>
+
+      Vue.component('mycomp',{
+        props: ['myprop','mycolor'],
+        template: `
+        <div>
+          <p :style="compStyle">{{myprop}} - {{someText}}</p>          
+          <hr/>
+        </div>
+        `,
+        data() {
+          return {
+            someText: 'Some text for my component',
+            compStyle: {
+              color: this.mycolor
+            }
+          };
+        }
+      });
+
+      new Vue({
+        el: '#app',
+        data: {
+          divStyle: {
+            color: 'red',
+            backgroundColor: 'lightgray',
+            fontSize:'2em'
+          },
+          message: 'hi there',
+          attendees: 15,
+          showComment: false,
+          members: [
+            {name:'Jack', isPresent:true},
+            {name:'Jill', isPresent:false},
+            {name:'Fred', isPresent:true},
+            {name:'Wilma', isPresent:true},
+            {name:'Barney', isPresent:false}
+          ],
+          counter: 0
+        },
+        methods: {
+          handleBtnClick: function() {
+            alert('We have ' + this.members.length + ' members');
+          },
+          countKeys: function() {
+            this.counter++;
+          }
+        }
+      });
+
+    </script>
+
+  </body>
+</html>
