@@ -38,7 +38,7 @@
       <button v-on:click="handleBtnClick">Show Member Count</button>
 
       <br><br>
-      <input @keyup="countKeys" type="text">  {{counter}}
+      <input @keyup="countKeys" v-model="inText" type="text">  {{counter}}
 
       <br><br>
       <span :title="message">Some text for the span</span>
@@ -94,6 +94,7 @@
             {name:'Barney', isPresent:false}
           ],
           newMember: '',
+          inText: '',
           counter: 0
         },
         methods: {
@@ -101,7 +102,7 @@
             alert('We have ' + this.members.length + ' members');
           },
           countKeys: function() {
-            this.counter++;
+            this.counter = this.inText.length;
           },
           addMember: function() {
             this.members.push({name:this.newMember});
