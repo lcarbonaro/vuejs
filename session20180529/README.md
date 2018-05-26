@@ -1,6 +1,8 @@
 More VueJS - Using vue-cli
 --------------------------
 
+This repo builds something like [this](https://dist-coznlbzabj.now.sh/).
+
 Usage Steps:
 
 1. git clone https://github.com/lcarbonaro/vuejs.git
