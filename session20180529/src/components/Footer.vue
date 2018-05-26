@@ -1,14 +1,16 @@
 <template> 
-  <p>
-    {{ msg }}
-  </p>  
+  <div class="container">
+    <footer>
+      We currently have {{ number }} member(s).
+    </footer>  
+  </div>  
 </template>
 
 <script>
 export default {
-  name: "Test",
+  name: "Footer",
   props: {
-    msg: String
+    number: Number
   }
 };
 </script>
