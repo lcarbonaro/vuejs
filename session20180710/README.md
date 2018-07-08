@@ -12,10 +12,10 @@ Usage Steps:
 
 
 Reference Links:
-- [Material Design](https://material.io/)
 - [Vuetify](https://vuetifyjs.com/en/)
 - [Vue Router](https://router.vuejs.org/guide/)
-- [Material Design Icons](https://materialdesignicons.com/)
+- [Material Design](https://material.io/)
+- [Material Design Icons](https://material.io/tools/icons/)
 
 - [vue-cli Docs](https://github.com/vuejs/vue-cli/blob/dev/docs/README.md)
 - [VueJS Official Site](https://vuejs.org/)
