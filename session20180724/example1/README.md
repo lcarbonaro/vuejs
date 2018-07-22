@@ -14,7 +14,7 @@ This example uses the news API from [NewsAPI.org](newsapi.org). For this you nee
 Usage Steps:
 
 1. git clone https://github.com/lcarbonaro/vuejs.git
-2. cd vuejs/session20180724
+2. cd vuejs/session20180724/example1
 3. npm install
 4. get your own API key from [NewsAPI.org](newsapi.org)
 5. create `creds.json` file with your API key as shown above
