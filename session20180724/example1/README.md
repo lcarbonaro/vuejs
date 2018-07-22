@@ -3,7 +3,7 @@ VueJS / Vuetify Example
 
 This repo builds something similar to [this](https://dist-czwzdtcfeq.now.sh).
 
-This example uses the news API from [NewsAPI.org](newsapi.org). For this you need to obtain an API key - it's free - and then create your own `creds.json` file in the project root, something like:
+This example uses the news API from [NewsAPI.org](https://newsapi.org). For this you need to obtain an API key - it's free - and then create your own `creds.json` file in the project root, something like:
 
 ```
 {
@@ -16,7 +16,7 @@ Usage Steps:
 1. git clone https://github.com/lcarbonaro/vuejs.git
 2. cd vuejs/session20180724/example1
 3. npm install
-4. get your own API key from [NewsAPI.org](newsapi.org)
+4. get your own API key from [NewsAPI.org](https://newsapi.org)
 5. create `creds.json` file with your API key as shown above
 6. npm run serve
 
